@@ -379,7 +379,7 @@ function callAI(key, prompt, resultDiv){
     }
   };
   xhr.onerror=function(){resultDiv.innerHTML="<p style=color:#c0392b;font-size:12px>❌ 网络错误</p>";};
-  xhr.send(JSON.stringify({model:"deepseek-v4-flash",messages:[{role:"system",content:"你是精通周易的命理大师，用最直白的大白话给人解卦。必须特别分析世爻和应爻的关系，根据问题判断用神（妻财、官鬼、父母、兄弟、子孙），围绕用神进行针对性分析。"},{role:"user",content:prompt}],max_tokens:4000}));
+  xhr.send(JSON.stringify({model:"deepseek-v4-flash",messages:[{role:"system",content:"你是精通周易的命理大师，用最直白的大白话给人解卦。必须特别分析世爻和应爻的关系，根据问题判断用神（妻财、官鬼、父母、兄弟、子孙），围绕用神进行针对性分析。"},{role:"user",content:prompt}],max_tokens:8192}));
 }
 
 // AI解卦按钮点击事件
